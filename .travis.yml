@@ -3,7 +3,7 @@ language: generic
 services:
   - docker
 before_install:
-  - echo "start Creating an image with dockerfile"
+  - echo "start Creating an image with Dockerfile.dev"
   - docker build -t sagukwon/docker-react-app -f Dockerfile.dev .
 script:
   - docker run -e CI=true sagukwon/docker-react-app npm run test -- --coverage
